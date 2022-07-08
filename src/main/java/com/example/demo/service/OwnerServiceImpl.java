@@ -23,17 +23,6 @@ public class OwnerServiceImpl implements OwnerService {
 		return ownerRepository.save(owner);
 	}
 
-	@Override
-	public Owner getOwnerById(long id) {
-		Optional<Owner> optional = ownerRepository.findById(id);
-		Owner owner = null;
-		if (optional.isPresent()) {
-			owner = optional.get();
-		} else {
-			throw new RuntimeException(" Owner not found for id :: " + id);
-		}
-		return owner;
-	}
 
 	@Override
 	public Owner loginOwner(String email) {
@@ -41,11 +30,6 @@ public class OwnerServiceImpl implements OwnerService {
 	}
 
 
-
-	@Override
-	public Page<Owner> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection) {
-		return null;
-	}
 
 
 }
