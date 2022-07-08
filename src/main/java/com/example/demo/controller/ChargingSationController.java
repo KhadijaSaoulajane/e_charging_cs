@@ -17,7 +17,7 @@ public class ChargingSationController {
     @GetMapping("/saveStation")
     public Station saveStation(@RequestParam String city,@RequestParam String address,@RequestParam String price,@RequestParam String status,@RequestParam String id)
     {
-        Station cs = new Station(city,address, "1".equals(status),Long.parseLong(price),Long.parseLong(id));
+        Station cs = new Station(city,address, status,Long.parseLong(price),Long.parseLong(id));
         return CsService.saveStation(cs);
     }
 

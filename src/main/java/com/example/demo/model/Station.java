@@ -17,8 +17,8 @@ public class Station {
         @Column(name = "address")
         private String address;
 
-        @Column(name = "availability")
-        private boolean availability;
+        @Column(name = "status")
+        private String availability;
 
         @Column(name = "price")
         private Long price;
@@ -50,11 +50,11 @@ public class Station {
             this.address = address;
         }
 
-        public boolean isAvailability() {
+        public String getAvailability() {
             return availability;
         }
 
-        public void setAvailability(boolean availability) {
+        public void setAvailability(String availability) {
             this.availability = availability;
         }
 
@@ -74,7 +74,7 @@ public class Station {
             this.owner_id = owner_id;
         }
 
-        public Station(String city, String address, boolean availability, Long price, Long owner_id) {
+        public Station(String city, String address, String availability, Long price, Long owner_id) {
             this.city = city;
             this.address = address;
             this.availability = availability;
