@@ -18,7 +18,7 @@ public class Station {
         private String address;
 
         @Column(name = "status")
-        private String availability;
+        private String status;
 
         @Column(name = "price")
         private Long price;
@@ -50,12 +50,12 @@ public class Station {
             this.address = address;
         }
 
-        public String getAvailability() {
-            return availability;
+        public String getStatus() {
+            return status;
         }
 
-        public void setAvailability(String availability) {
-            this.availability = availability;
+        public void setStatus(String status) {
+            this.status = status;
         }
 
         public Long getPrice() {
@@ -74,10 +74,10 @@ public class Station {
             this.owner_id = owner_id;
         }
 
-        public Station(String city, String address, String availability, Long price, Long owner_id) {
+        public Station(String city, String address, String status, Long price, Long owner_id) {
             this.city = city;
             this.address = address;
-            this.availability = availability;
+            this.status = status;
             this.price = price;
             this.owner_id = owner_id;
         }
