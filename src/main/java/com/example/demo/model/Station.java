@@ -82,5 +82,7 @@ public class Station {
             this.owner_id = owner_id;
         }
 
+    public Station() {
+    }
 }
 

@@ -1,10 +1,12 @@
 
 package com.example.demo.service;
 
-import com.example.demo.model.Owner;
 import com.example.demo.model.Station;
-import org.springframework.data.domain.Page;
+
+import java.util.List;
 
 public interface CsService {
     Station saveStation(Station cs);
+    List<Station> listCS();
+
 }
